@@ -1,11 +1,10 @@
 // Задание 1
-	// Напишите цикл, который выводит теругольник
+	// Напишите цикл, который выводит треугольник
 
-var lattice = '#';
-document.write (lattice + '<br>');
+var lattice = '';
 
-for (var i = 0; i < 6; i++){
-	lattice = lattice + '#';
+for (var i = 0; i < 7; i++){
+	lattice += '#';
 	document.write (lattice + '<br>');
 }
 
