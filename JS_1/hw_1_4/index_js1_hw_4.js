@@ -41,9 +41,9 @@ function countChar(string, s_char) {
 // Можно ли её как-то исправить?
 
 function isEven(number) {
-	if(number>1){
-		isEven(number-2);
+	if(number>1){ 
+		return isEven(number-2);
 	} else {
-		return (!number)?true:false; 
+		return (!number)?1:0; 
 	}
 }
