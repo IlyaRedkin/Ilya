@@ -44,6 +44,6 @@ function isEven(number) {
 	if(number>1){
 		isEven(number-2);
 	} else {
-		(!number)?true:false; 
+		return (!number)?true:false; 
 	}
 }
