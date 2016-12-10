@@ -38,9 +38,10 @@
 
 		users.push(user);
 
-		for (var i=0; i<users.lenght; ++i){
-			conlose.log('Имя: ' + users[i].firstName + 'Фамилия: ' + users[i].lastName + 'Дата рождения: ' + users[i].birthDay + 'Телефон: ' + users[i].phones);
+		for (var i=0; i<users.length; ++i){
+			console.log(' Имя: ' + users[i].firstName + ' Фамилия: ' + users[i].lastName + ' Дата рождения: ' + users[i].birthDay + ' Телефон: ' + users[i].phones.join(','));
 		}
+
 
 	</script>
 </body>
