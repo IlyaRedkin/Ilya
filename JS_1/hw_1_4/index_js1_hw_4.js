@@ -23,4 +23,5 @@ function countBs(string){
 	for(var i=0;i<=string.length-1;i++){
 		if(string.charAt(i)=='B') count++;
 	}
+	return count;
 }
