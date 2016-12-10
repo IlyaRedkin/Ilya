@@ -25,3 +25,11 @@ function countBs(string){
 	}
 	return count;
 }
+
+function countChar(string, s_char) {
+	var count=0;
+	for(var i=0;i<=string.length-1;i++){
+		if(string.charAt(i)==s_char) count++;
+	}
+	return count;
+}
