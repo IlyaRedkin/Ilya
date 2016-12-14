@@ -2,5 +2,14 @@
 // принимать 3 числа от 0 до 255 и возвращать строковый хеш.
 
 function DecToHex (red, green, blue) {
-	return '#' + toString(red) + toString(green) + toString(blue);
+	var color = {red, green, blue};
+	for (var i=0; i<color.length; i++){
+		if (color.i.length < 2) {
+			color.i = '0' + color.i.toString(16);
+		}
+		else {
+			color.i = color.i.toString(16);
+		} 
+	}
+	return '#' + color;
 }
