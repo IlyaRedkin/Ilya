@@ -3,13 +3,13 @@
 
 function DecToHex (red, green, blue) {
 	var color = {red, green, blue};
-	for (var i=0; i<color.length; i++){
-		if (color.i.length < 2) {
-			color.i = '0' + color.i.toString(16);
+	for (key in color){
+		if (color[key].length < 2) {
+			color[key] = '0' + color[key].toString(16);
 		}
 		else {
-			color.i = color.i.toString(16);
+			color[key] = color[key].toString(16);
 		} 
-	}
+	}	
 	return '#' + color;
-}
+}	
