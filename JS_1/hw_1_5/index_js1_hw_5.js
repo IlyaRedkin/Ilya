@@ -5,11 +5,11 @@ function DecToHex (red, green, blue) {
 	var color = [red, green, blue];
 	for (var i=0; i<color.length; i++){
 		if (color[i].length < 1) {
-			color[i] = string('0' + color[i].toString(16));
+			color[i] = '0' + String(color[i].toString(16));
 		}
 		else {
 			color[i] = color[i].toString(16);
 		} 
 	}	
-	return '#' + '0' + color[0] + color[1] + color[2];
+	return '#' + color[0] + color[1] + color[2];
 }	
