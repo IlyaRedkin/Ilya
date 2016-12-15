@@ -36,4 +36,5 @@ function NumToObj(number){
 	digit['единицы'] = a0;
 	digit['десятки'] = a1;
 	digit['сотни'] = a2;
+	return digit;
 }
