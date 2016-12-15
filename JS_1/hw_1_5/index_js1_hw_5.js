@@ -4,7 +4,8 @@
 function DecToHex (red, green, blue) {
 	var color = [red, green, blue];
 	for (var i=0; i<color.length; i++){
-		if (String(color[i]).length < 1) {
+		if(color[i] > 255 || color[i] < 0) return console.log('Please inter value form 0 to 255')
+		if (String(color[i]).length < 2) {
 			color[i] = '0' + color[i].toString(16);
 		}
 		else {
@@ -20,6 +21,6 @@ function DecToHex (red, green, blue) {
 // ‘десятки’: 4, 'сотни’: 2}. Если число превышает 999, необходимо выдать соответствующее
 // сообщение с помощью console.log и вернуть пустой объект.
 
-function NumToObj(number){
-	if(nu)
-}
+// function NumToObj(number){
+// 	if(nu)
+// }
