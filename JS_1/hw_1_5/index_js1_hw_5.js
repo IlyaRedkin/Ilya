@@ -29,11 +29,12 @@ function NumToObj(number){
 	if(number>999 || number<0){
 		return console.log('please enter number from 0 to 999');
 	}
+
 	var a2 = Math.floor(number/100);
 	number = number - a2*100;
 	var a1 = Math.floor(number/10);
-	var a0 = number - a1*10;
-	digit['единицы'] = a0;
+	number = number - a1*10;
+	digit['единицы'] = number;
 	digit['десятки'] = a1;
 	digit['сотни'] = a2;
 	return digit;
