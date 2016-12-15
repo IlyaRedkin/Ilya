@@ -3,16 +3,19 @@
 
 function DecToHex (red, green, blue) {
 	var color = [red, green, blue];
+	var color_16 = '';
 	for (var i=0; i<color.length; i++){
-		if(color[i] > 255 || color[i] < 0) return console.log('Please inter value form 0 to 255')
+		if(color[i] > 255 || color[i] < 0){
+			return console.log('Please inter value form 0 to 255');	
+		} 
 		if (String(color[i]).length < 2) {
-			color[i] = '0' + color[i].toString(16);
+			color_16 += '0' + color[i].toString(16);
 		}
 		else {
-			color[i] = color[i].toString(16);
+			color_16 += color[i].toString(16);
 		} 
 	}	
-	return '#' + color[0] + color[1] + color[2];
+	return '#' + color_16;
 }	
 
 // Написать функцию, преобразующую число в объект. Передавая на вход число от 0 до 999, мы
