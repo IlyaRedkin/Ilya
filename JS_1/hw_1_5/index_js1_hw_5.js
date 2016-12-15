@@ -32,7 +32,7 @@ function NumToObj(number){
 	var a2 = Math.floor(number/100);
 	number -= a2;
 	var a1 = Math.floor(number/10);
-	a0 -= a1;
+	var a0 -= a1;
 	digit['единицы'] = a0;
 	digit['десятки'] = a1;
 	digit['сотни'] = a2;
