@@ -4,7 +4,7 @@
 function DecToHex (red, green, blue) {
 	var color = [red, green, blue];
 	for (var i=0; i<color.length; i++){
-		if (color[i].length < 1) {
+		if (String(color[i].length) < 1) {
 			color[i] = '0' + color[i].toString(16);
 		}
 		else {
@@ -13,3 +13,13 @@ function DecToHex (red, green, blue) {
 	}	
 	return '#' + color[0] + color[1] + color[2];
 }	
+
+// Написать функцию, преобразующую число в объект. Передавая на вход число от 0 до 999, мы
+// должны получить на выходе объект, в котором в соответствующих свойствах описаны единицы,
+// десятки и сотни. Например для числа 245 мы должны получить следующий объект: {‘единицы’: 5,
+// ‘десятки’: 4, 'сотни’: 2}. Если число превышает 999, необходимо выдать соответствующее
+// сообщение с помощью console.log и вернуть пустой объект.
+
+function NumToObj(number){
+	if(nu)
+}
