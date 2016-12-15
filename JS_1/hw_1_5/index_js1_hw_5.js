@@ -5,7 +5,7 @@ function DecToHex (red, green, blue) {
 	var color = [red, green, blue];
 	for (var i=0; i<color.length; i++){
 		if (color[i].length < 1) {
-			color[i] = '0' + String(color[i].toString(16));
+			color[i] = '0' + color[i].toString(16);
 		}
 		else {
 			color[i] = color[i].toString(16);
