@@ -27,7 +27,7 @@ function DecToHex (red, green, blue) {
 function NumToObj(number){
 	var digit = {};
 	if(number>999 || number<0){
-		console.log('please enter number from 0 to 999');
+		return console.log('please enter number from 0 to 999');
 	}
 	var a2 = Math.floor(number/100);
 	number = number - a2*100;
