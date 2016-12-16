@@ -45,7 +45,15 @@ function NumToObj(number){
 // console ​.log(objectToQueryString({user: ​'Dmitry' ​})); ​// user=Dmitry
 // console ​.log(objectToQueryString({user: ​'Dmitry' ​, password: ​'pass' ​})); ​// user=Dmitry&password=pass 
 // ​console ​.log(objectToQueryString({user: ​'Dmitry' ​, password: 'pass' ​, id= ​1 ​})); ​// user=Dmitry&password=pass&id=1
+ // "Ключ: " + key + " значение: " + menu[key]
 
 function objectToQueryString(object){
-	return String(object);
+	var string = '';
+	var i = 0;
+	for (key in object){
+		string += String(key) + '=' + String(object[key]);
+		++i;
+		if(i>1) string += '&';
+	}
+	return string;
 }
