@@ -49,7 +49,6 @@ function NumToObj(number){
 
 function objectToQueryString(object){
 	var string = '';
-	var i = 0;
 	for (key in object){
 		if(string) string += '&';
 		string += String(key) + '=' + String(object[key]);
