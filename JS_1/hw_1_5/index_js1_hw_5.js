@@ -34,8 +34,8 @@ function NumToObj(number){
 	number = number - a2*100;
 	var a1 = Math.floor(number/10);
 	number = number - a1*10;
-	digit['единицы'] = number;
-	digit['десятки'] = a1;
-	digit['сотни'] = a2;
+	digit['\'единицы\''] = number;
+	digit['\'десятки\''] = a1;
+	digit['\'сотни\''] = a2;
 	return digit;
 }
