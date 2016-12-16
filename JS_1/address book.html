@@ -33,13 +33,23 @@
 		function addUser(users){
 			var user = {};
 			var max_id = 0;
-			for(var i=0; i<users.length; i++){
-				for (var key in users[i]){
-				if(users[i].id>max_id){
-					max_id = users[i].id;
+			
+			// for(var i=0; i<users.length; i++){
+			// 	for (var key in users[i]){
+			// 	if(users[i].id>max_id){
+			// 		max_id = users[i].id;
+			// 		}
+			// 	} 
+			// }
+
+			users.map(function(array){
+				users.map(function(obj){
+					if(obj.id>max_id){
+						max_id = obj.id;
 					}
-				} 
-			}
+				});	
+			});
+
 			user.id = ++max_id;
 			user.firstName = prompt('Введите имя:');
 			user.lastName = prompt('Введите фамилию:');
