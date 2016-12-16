@@ -47,5 +47,5 @@ function NumToObj(number){
 // ​console ​.log(objectToQueryString({user: ​'Dmitry' ​, password: 'pass' ​, id= ​1 ​})); ​// user=Dmitry&password=pass&id=1
 
 function objectToQueryString(object){
-	console.log(object);
+	return String(object);
 }
