@@ -51,9 +51,8 @@ function objectToQueryString(object){
 	var string = '';
 	var i = 0;
 	for (key in object){
+		if(string) string += '&';
 		string += String(key) + '=' + String(object[key]);
-		++i;
-		if(i>1) string += '&';
 	}
 	return string;
 }
