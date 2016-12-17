@@ -6,7 +6,23 @@
 </head>
 <body>
 	<script type="text/javascript">
-		
+// 	Напишите функцию arrayToList, которая строит список, получая в качестве аргумента [1, 2, 3]
+		// var list = {value: 1, rest:
+		// 					 {value: 2, rest:
+		// 					 	{value: 3, rest: null} 
+		// 					 } 
+
+		// 			};
+		function arrayToList(val1, val2, val3){
+			var array={};
+			function addListItem (value, target_array){
+				var list_item={};
+				list_item.value = value;
+				list_item.rest = {};
+				list_item.push(target_array);
+			}
+			return array{addListItem(1,array)};
+		}
 	</script>
 </body>
 </html>
