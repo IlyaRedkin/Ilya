@@ -13,16 +13,35 @@
 		// 					 } 
 
 		// 			};
-		function arrayToList(val1, val2, val3){
-			var array={};
-			function addListItem (value, target_array){
-				var list_item={};
-				list_item.value = value;
-				list_item.rest = {};
-				list_item.push(target_array);
+		
+		var arr=[1, 2, 3];
+		
+		var list={
+			value: arr[0],
+			rest: {},
+		};
+
+		function arrayToList(arr){
+		var list = {value: arr[0], rest:
+			{value: arr[1], rest:
+				{value: arr[2], rest: null}
 			}
-			return array{addListItem(1,array)};
+		};
+		return console.log(list);
 		}
+
+		arrayToList([1, 2, 3]);
+
+
+		// var user = {
+		// 	name: 'Василий',
+		// 	sayHi: function() {
+		//     	alert( user.name ); // приведёт к ошибке
+		// 	}
+		// };
+
+		// admin.saiHi();
+	
 	</script>
 </body>
 </html>
