@@ -6,7 +6,7 @@
 </head>
 <body>
 	<script type="text/javascript">
-		// 	Напишите функцию arrayToList, которая строит список, получая в качестве аргумента [1, 2, 3]
+		// #1	Напишите функцию arrayToList, которая строит список, получая в качестве аргумента [1, 2, 3]
 		// var list = {value: 1, rest:
 		// 					 {value: 2, rest:
 		// 					 	{value: 3, rest: null} 
@@ -26,20 +26,48 @@
 
 		arrayToList([1, 2, 3]);
 
-		// а также функцию listToArray, которая создаёт массив из списка.
+		// #2 а также функцию listToArray, которая создаёт массив из списка.
 		var	main_arr = [];
+
 		function listToArray(list_obj){
-			for (var keys in list_obj) {
-				if(typeof list_obj[keys] == 'object') listToArray(list_obj[keys]);
-				else main_arr.push(list_obj[keys]);
+			function addToArray(list_obj){
+				for (var keys in list_obj) {
+					if(typeof list_obj[keys] == 'object') addToArray(list_obj[keys]);
+					else array.push(list_obj[keys]);
+				}
+				return array;
 			}
-			return main_arr;
+			var array = [];
+			addToArray(list_obj);
+			return array;
 		};
 
 		console.log(listToArray(main_list));
 
-		// Также напишите вспомогательную функцию prepend, которая получает элемент и создаёт новый список,
+		// #3 Также напишите вспомогательную функцию prepend, которая получает элемент и создаёт новый список,
 		// где этот элемент добавлен спереди к первоначальному списку,
+
+		function prepend(element, list_obj){
+			var new_list = {};
+			new_list.value = element;
+			new_list.rest = list_obj;
+			return new_list;
+		}
+		console.log(prepend(5, main_list));
+
+		// #4 и функцию nth, которая в качестве
+		// аргументов принимает список и число, а возвращает элемент на заданной позиции в списке, или же
+		// undefined в случае отсутствия такого элемента.
+
+		var list_arr;
+
+		function nth(list_obj, list_position){
+			list_arr = listToArray(list_obj);
+			return list_arr[list_position];
+		};
+
+		console.log(nth(main_list, 0));
+
 
 	</script>
 </body>
