@@ -76,6 +76,32 @@
 					}).join(';');
 				}).join('\r\n');
 		}
+
+		// function ​ ​search ​(value, users) {
+		// 	var ​ result = [];
+		// 	var ​ re = ​new ​ RegExp(value, ​'i' ​);
+			
+		// 	users.forEach( ​function ​(item){
+		// 		var ​ findString = ​item ​.firstName + ​' ' ​ + ​item ​.lastName;
+		// 		if ​ (re. ​test ​(findString)) {
+		// 			result.push( ​item ​);
+		// 		}
+		// 	})
+		// 	return ​ result;
+		// }
+
+		function search (value, users) {
+			var result = [];
+			var re = new RegExp(value, 'i');
+
+			users.forEach(function(item){
+				var findString = item.firstName + ' ' + item.lastName;
+				if (re.test(findString)){
+					result.push(item);
+				}
+			})
+			return result;
+		}
 		
 	</script>
 </body>
