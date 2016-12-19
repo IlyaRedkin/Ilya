@@ -6,42 +6,41 @@
 </head>
 <body>
 	<script type="text/javascript">
-// 	Напишите функцию arrayToList, которая строит список, получая в качестве аргумента [1, 2, 3]
+		// 	Напишите функцию arrayToList, которая строит список, получая в качестве аргумента [1, 2, 3]
 		// var list = {value: 1, rest:
 		// 					 {value: 2, rest:
 		// 					 	{value: 3, rest: null} 
-		// 					 } 
-
+		// 					 }
 		// 			};
-		
-		var arr=[1, 2, 3];
-		
-		var list={
-			value: arr[0],
-			rest: {},
-		};
-
+		var main_list;
+			
 		function arrayToList(arr){
 		var list = {value: arr[0], rest:
 			{value: arr[1], rest:
 				{value: arr[2], rest: null}
 			}
 		};
+		main_list = list;
 		return console.log(list);
-		}
+		};
 
 		arrayToList([1, 2, 3]);
 
+		// а также функцию listToArray, которая создаёт массив из списка.
+		var	main_arr = [];
+		function listToArray(list_obj){
+			for (var keys in list_obj) {
+				if(typeof list_obj[keys] == 'object') listToArray(list_obj[keys]);
+				else main_arr.push(list_obj[keys]);
+			}
+			return main_arr;
+		};
 
-		// var user = {
-		// 	name: 'Василий',
-		// 	sayHi: function() {
-		//     	alert( user.name ); // приведёт к ошибке
-		// 	}
-		// };
+		console.log(listToArray(main_list));
 
-		// admin.saiHi();
-	
+		// Также напишите вспомогательную функцию prepend, которая получает элемент и создаёт новый список,
+		// где этот элемент добавлен спереди к первоначальному списку,
+
 	</script>
 </body>
 </html>
