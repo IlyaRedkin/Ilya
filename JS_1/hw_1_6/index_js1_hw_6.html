@@ -68,6 +68,48 @@
 
 		console.log(nth(main_list, 0));
 
+		// #5 Напишите reverseArray, которая получает массив как
+		// аргумент и выдаёт новый массив, с обратным порядком элементов. Не используйте стандартный метод reverse.
+
+		function reverseArray(array){
+			var arr = [];
+			array.forEach(function(item, i, array) {
+				arr.unshift(item);
+			});
+			return arr;
+		};
+
+		// #6 Напишите reverseArrayInPlace, которая работает как
+		// оригинальный метод reverse – она меняет порядок элементов на обратный в том массиве,
+		// который был ей передан в качестве аргумента. Не используйте стандартный метод reverse.
+
+
+		// #7 * Реализовать функцию pick(obj, keys), которая принимает аргументами объект и массив строк
+		// (названия ключей). Возвращает новый объект, куда вошли все ключи, указанные в массиве keys,
+		// и соответствующие значения из объекта obj. Если в объекте obj, нет ключа, указанного в
+		// массиве keys, в результирующем объекте этот ключ не должен присутствовать
+
+		// pick(user, ['name']); // {name: 'Sergey'}
+		// pick(user, ['name', 'second-name']); // {name: 'Sergey'}
+		// pick(user, ['name', 'friends']); // {name: 'Sergey', friends:['Sveta',
+		// 'Artem']}
+
+		var user = {
+		name: 'Sergey',
+		age: 30,
+		email: 'sergey@gmail.com',
+		friends: ['Sveta', 'Artem']
+		}
+
+		function pick(obj, keys){
+			var new_obj = {};
+			keys.forEach(function(item, i, keys) {
+				for (var key_s in obj) {
+					if(key_s == item) new_obj[key_s] = obj[key_s];
+				}
+			});
+			return new_obj;
+		}
 
 	</script>
 </body>
