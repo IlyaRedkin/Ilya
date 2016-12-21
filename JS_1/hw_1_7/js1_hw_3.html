@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS1_HW7</title>
+	<script type="text/javascript">
+		var row = '';
+		var odd = ' #';							//составляющая нечетной строки
+		var even = '# ';						//составляющая четной строки
+
+		for (var i = 0; i < 8; i++){			//перебираем столбцы
+			// row = row + 'space';					//доп. символ чтобы видеть пробел в начале строки при выводе
+			for(var a = 0; a < 4; a++){			//записываем строки
+				if (i%2) row = row + even;		//четная строка шахматной доски
+				else row = row + odd;			//нечетная строка шахматной доски
+			}
+			row = row + '\n';					//записываем переход на новую строку
+		}
+
+		console.log (row);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
