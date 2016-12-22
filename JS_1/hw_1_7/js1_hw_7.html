@@ -73,89 +73,6 @@
 		<div class="letter">H</div>
 	</div>
 
-	<div class="rows">
-		<div class="row">
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-		</div>
-		<div class="row">
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-		</div>
-		<div class="row">
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-		</div>
-		<div class="row">
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-		</div>
-		<div class="row">
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-		</div>
-		<div class="row">
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-		</div>
-		<div class="row">
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-		</div>
-		<div class="row">
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-			<div class="black"></div>
-			<div class="white"></div>
-		</div>
-	</div>
-
 	<script type="text/javascript">
 		// var row = '';
 		// var odd = ' #';							//составляющая нечетной строки
@@ -168,60 +85,31 @@
 		// 	}
 		// 	row = row + '\n';					//записываем переход на новую строку
 		// }
-
 		// console.log (row);
 
-		var cl = document.createElement('div');
-		cl.className = "bla";
-		cl.innerHTML = "Hello world!";
-		document.body.appendChild(cl);
 
 		var rows = document.createElement('div');
 		rows.className = "rows";
 		rows.innerHTML = "";
-		// document.body.appendChild(rows);
+		document.body.appendChild(rows);
 
-		var row = document.createElement('div');
-		row.className = "row";
-		row.innerHTML = "";
-
-
-		var black = document.createElement('div');			//составляющая четной строки
-		black.className = "black";
-		black.innerHTML = "";
-		// document.body.appendChild(black);
-
-		var white = document.createElement('div');			//составляющая нечетной строки
-		white.className = "white";
-		white.innerHTML = "";
-		// document.body.appendChild(white);
-
-	
-		// var odd = ' ';										
-		// var even = '#';										
+		var rows_mas = [];
 
 		for (var i = 0; i < 8; i++){
-			document.body.appendChild(row);						//перебираем столбцы
-			for(var a = 0; a < 8; a++){							//записываем строки
+			rows.insertAdjacentHTML('afterBegin', '<div class="row"></div>'); 						//перебираем столбцы
+					
+			for(var a = 0; a < 8; a++){																//записываем строки
+					rows_mas = document.getElementsByClassName('row');
 				if (i%2!=a%2) {
-					document.body.appendChild(black);			//четная строка шахматной доски
-					// row = row + even;
+					
+					rows_mas[0].insertAdjacentHTML('afterBegin', '<div class="black"></div>');		//четная строка шахматной доски
 				}								
 				else {
-					document.body.appendChild(white);
-					// row = row + odd;
-				}						//нечетная строка шахматной доски
+					rows_mas[0].insertAdjacentHTML('afterBegin', '<div class="white"></div>');		//нечетная строка шахматной доски
+					}						
 			}
-			row = row + '\n';								//записываем переход на новую строку
 		}
 
-		// console.log (row);
-
-
-
-
-		// <div class="white"></div>
-		// <div class="black"></div>
 	</script>
 </body>
 </html>
