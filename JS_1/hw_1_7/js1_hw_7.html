@@ -3,24 +3,225 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JS1_HW7</title>
-	<script type="text/javascript">
-		var row = '';
-		var odd = ' #';							//составляющая нечетной строки
-		var even = '# ';						//составляющая четной строки
-
-		for (var i = 0; i < 8; i++){			//перебираем столбцы
-			// row = row + 'space';					//доп. символ чтобы видеть пробел в начале строки при выводе
-			for(var a = 0; a < 4; a++){			//записываем строки
-				if (i%2) row = row + even;		//четная строка шахматной доски
-				else row = row + odd;			//нечетная строка шахматной доски
-			}
-			row = row + '\n';					//записываем переход на новую строку
+	<style>
+		.row{
+			margin: 0;
+			float: left;
+			clear:both;
 		}
+		.black, .white{
+			border: 1px solid black;
+			width: 50px;
+			height: 50px;
+			box-sizing: border-box;
+			float: left;
+		}
+		.white{
+			background-color: white;
+		}
+		.black{
+			background-color: black;
+		}
+		.number{
+			border: 1px solid white;
+			width: 50px;
+			height: 25px;
+			box-sizing: border-box;
+			float: left;
+			text-align: center;
+		}
+		.numbers{
+			overflow: hidden;
+		}
+		.letter{
+			border: 1px solid white;
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			padding-top: 15px;
+			box-sizing: border-box;
+			float: left;
+			clear:both;
 
-		console.log (row);
-	</script>
+		}
+		.rows{
+			overflow: hidden;
+		}
+	</style>
 </head>
 <body>
+	<div class="numbers">
+		<div class="number"></div>
+		<div class="number">1</div>
+		<div class="number">2</div>
+		<div class="number">3</div>
+		<div class="number">4</div>
+		<div class="number">5</div>
+		<div class="number">6</div>
+		<div class="number">7</div>
+		<div class="number">8</div>
+	</div>
 
+	<div class="letters">
+		<div class="letter">A</div>
+		<div class="letter">B</div>
+		<div class="letter">C</div>
+		<div class="letter">D</div>
+		<div class="letter">E</div>
+		<div class="letter">F</div>
+		<div class="letter">G</div>
+		<div class="letter">H</div>
+	</div>
+
+	<div class="rows">
+		<div class="row">
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+		</div>
+		<div class="row">
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+		</div>
+		<div class="row">
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+		</div>
+		<div class="row">
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+		</div>
+		<div class="row">
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+		</div>
+		<div class="row">
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+		</div>
+		<div class="row">
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+		</div>
+		<div class="row">
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+			<div class="black"></div>
+			<div class="white"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		// var row = '';
+		// var odd = ' #';							//составляющая нечетной строки
+		// var even = '# ';						//составляющая четной строки
+
+		// for (var i = 0; i < 8; i++){			//перебираем столбцы
+		// 	for(var a = 0; a < 4; a++){			//записываем строки
+		// 		if (i%2) row = row + even;		//четная строка шахматной доски
+		// 		else row = row + odd;			//нечетная строка шахматной доски
+		// 	}
+		// 	row = row + '\n';					//записываем переход на новую строку
+		// }
+
+		// console.log (row);
+
+		var cl = document.createElement('div');
+		cl.className = "bla";
+		cl.innerHTML = "Hello world!";
+		document.body.appendChild(cl);
+
+		var rows = document.createElement('div');
+		rows.className = "rows";
+		rows.innerHTML = "";
+		// document.body.appendChild(rows);
+
+		var row = document.createElement('div');
+		row.className = "row";
+		row.innerHTML = "";
+
+
+		var black = document.createElement('div');			//составляющая четной строки
+		black.className = "black";
+		black.innerHTML = "";
+		// document.body.appendChild(black);
+
+		var white = document.createElement('div');			//составляющая нечетной строки
+		white.className = "white";
+		white.innerHTML = "";
+		// document.body.appendChild(white);
+
+	
+		// var odd = ' ';										
+		// var even = '#';										
+
+		for (var i = 0; i < 8; i++){
+			document.body.appendChild(row);						//перебираем столбцы
+			for(var a = 0; a < 8; a++){							//записываем строки
+				if (i%2!=a%2) {
+					document.body.appendChild(black);			//четная строка шахматной доски
+					// row = row + even;
+				}								
+				else {
+					document.body.appendChild(white);
+					// row = row + odd;
+				}						//нечетная строка шахматной доски
+			}
+			row = row + '\n';								//записываем переход на новую строку
+		}
+
+		// console.log (row);
+
+
+
+
+		// <div class="white"></div>
+		// <div class="black"></div>
+	</script>
 </body>
 </html>
