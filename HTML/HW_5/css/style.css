@@ -1,0 +1,158 @@
+body{
+	background: #f8f8f8;
+}
+
+.menu a {
+	font-size: 14px;
+	color: grey;
+	font-family: Arial;
+}
+
+.menu {
+	list-style-type: none;
+}
+
+.menu li a:hover{
+	color: #FF04DF;
+}
+
+h4, h5 {
+	color: green;
+	font-size: 20px;
+	font-weight: 800;
+	background: #eaeaea;
+}
+
+.description {
+	color: #8A1EDE;
+	font-size: 16px;
+	font-style: italic;
+	line-height: 12px;
+}
+
+.characteristics {
+	color: #DFB551;
+	font-size: 12px;
+	font-style: oblique;
+	line-height: 25px;
+	text-align: right;
+	list-style: none url(../img/list_item.png);
+}
+
+input[type="text"] {
+    width: 60px;
+    height: 60px;
+    /*background: #FA15C1;*/
+    color: #FA8615;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+}
+
+input[type="email"]:focus{
+    width: 30px;
+    height: 30px;
+    background: #FA15C1;
+    color: #1EFF00;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+}
+
+textarea {
+text-transform: capitalize;
+}
+
+a img {
+	border: 15px groove #9CED3C;
+}
+
+a img:hover{
+	border: 15px solid #eaeaea;
+}
+
+
+
+table{
+	border: 1px solid #0C0B0B;
+	border-collapse: collapse;
+}
+
+td{
+	border: 3px solid #0C0B0B;
+}
+
+.link_goods a{
+	display: inline-block;
+	margin: 30px;
+	} 
+
+.link_goods :first-letter {
+	color: #FF000C;
+	font-size: 20px;
+	font-family: "Lucida Console";
+}
+
+.top_row{
+	height: 200px;
+}
+table{
+	text-align: center;
+}
+
+.container{
+	width: 300px;
+	margin: auto;
+}
+
+.header{
+	background-color: #FCC505;
+    height: 150px;
+}
+
+.header img{
+	float: left; 
+	margin: 8px;
+}
+
+.menu li{
+	float: right;
+	text-align: right;
+	display: inline-block;
+	padding: 60px 10px;
+}
+
+.footer{
+	height: 85px;
+	background: #96D45F;
+	text-align: right;
+	padding: 30px 30px 0px 0px;
+}
+
+.page_goods_main img{
+	float: left;
+	height: 60px;
+	width: auto;
+	margin: 0px;
+	border:10px solid #96D45F;
+}
+
+.button_buy{
+	display: inline-block;
+	padding: 10px 10px;
+	color: red;
+	background-color: yellow;
+}
+
+.button_buy:hover{
+	background-color: green;
+}
+
+.button_buy:active{
+	background-color: black;
+}
+
+.map{
+	width: 374px;
+	height: auto;
+}
