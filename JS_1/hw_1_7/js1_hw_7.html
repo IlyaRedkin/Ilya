@@ -93,22 +93,53 @@
 		rows.innerHTML = "";
 		document.body.appendChild(rows);
 
-		var rows_mas = [];
+		// var rows_mas = [];
+		// var field = document.createElement('div');
+		// field.innerHTML = "";
 
 		for (var i = 0; i < 8; i++){
-			rows.insertAdjacentHTML('afterBegin', '<div class="row"></div>'); 						//перебираем столбцы
-					
+			// rows.insertAdjacentHTML('afterBegin', '<div class="row"></div>'); 						//перебираем столбцы
+			var row = document.createElement('div');
+			row.innerHTML = "";
+			row.className = "row";
+			rows.appendChild(row);
+
 			for(var a = 0; a < 8; a++){																//записываем строки
-					rows_mas = document.getElementsByClassName('row');
+					// rows_mas = document.getElementsByClassName('row');
 				if (i%2!=a%2) {
-					
-					rows_mas[0].insertAdjacentHTML('afterBegin', '<div class="black"></div>');		//четная строка шахматной доски
+					var field = document.createElement('div');
+					field.innerHTML = "";
+					field.className = "black";
+					row.appendChild(field);			
+					// rows_mas[0].insertAdjacentHTML('afterBegin', '<div class="black"></div>');		//четная строка шахматной доски
 				}								
 				else {
-					rows_mas[0].insertAdjacentHTML('afterBegin', '<div class="white"></div>');		//нечетная строка шахматной доски
+					var field = document.createElement('div');
+					field.innerHTML = "";
+					field.className = "white";
+					row.appendChild(field);
+					// rows_mas[0].insertAdjacentHTML('afterBegin', '<div class="white"></div>');		//нечетная строка шахматной доски
 					}						
 			}
 		}
+
+		// for (var i = 0; i < 8; i++){
+		// 	rows.insertAdjacentHTML('afterBegin', '<div class="row"></div>'); 						//перебираем столбцы
+					
+		// 	for(var a = 0; a < 8; a++){																//записываем строки
+		// 			rows_mas = document.getElementsByClassName('row');
+		// 		if (i%2!=a%2) {
+					
+		// 			rows_mas[0].insertAdjacentHTML('afterBegin', '<div class="black"></div>');		//четная строка шахматной доски
+		// 		}								
+		// 		else {
+		// 			rows_mas[0].insertAdjacentHTML('afterBegin', '<div class="white"></div>');		//нечетная строка шахматной доски
+		// 			}						
+		// 	}
+		// }
+
+
+
 
 	</script>
 </body>
