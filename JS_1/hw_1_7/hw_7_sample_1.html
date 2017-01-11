@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chess board</title>
+	<style>
+		.black{
+			background-color: dimgray;
+			width: 60px;
+			height: 60px;
+			text-align: center;
+			font-size: 60px;
+			display: inline-block;
+		}
+		.white{
+			background-color: white;
+			width: 60px;
+			height: 60px;
+			text-align: center;
+			font-size: 60px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		for(var x=0;x<9;x++){
+			var div = document.createElement('div');
+			arr = ['', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+			div.className = "white";
+			div.innerText = arr[x];
+			document.body.appendChild(div);
+		}
+		var br1 = document.createElement('br');
+		document.body.appendChild(br1);
+
+		for(i=0;i<8;i++){
+			var div = document.createElement('div');
+			div.className = "white";
+			div.innerText = i + 1;
+			document.body.appendChild(div);
+			for(var x=0; x<8; x++){
+				var div = document.createElement('div');
+				div.className = (i+x)%2 == 0 ? "black" : "white";
+				div.innerText = [0,7].indexOf(i) != -1 ? [0,7].indexOf(x) != -1 ? 'л' : [1,6].indexOf(x) != -1 ? 'к' : [2,5].indexOf(x) != -1 ? 'с' : x==3 ? 'Ф' : 'К' : [1,6].indexOf(i) !=-1 ? 'п' : '';
+				document.body.appendChild(div);
+			}
+			var br = document.createElement('br');
+			document.body.appendChild(br);
+		}
+	</script>
+</body>
+</html>
